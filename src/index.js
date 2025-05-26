@@ -20,30 +20,30 @@ function updateCity(event) {
     let cityTime = moment().tz(cityTimeZone);
     let citiesElement = document.querySelector("#cities");
 
-    if (cityTimeZone === "") {
-        citiesElement.innerHTML = `<div class="city" id="America/Los_Angeles">
-                    <div>
-                        <h2>Los Angeles</h2>
-                        <div class="date"></div>
-                    </div>
-                    <div class="time"><small></small></div>
-                </div>
-                <div class="city" id="Europe/Budapest">
-                    <div>
-                        <h2>Budapest</h2>
-                        <div class="date"></div>
-                    </div>
-                    <div class="time"><small></small></div>
-                </div>
-                <div class="city" id="Europe/Madrid">
-                    <div>
-                        <h2>Madrid</h2>
-                        <div class="date"></div>
-                    </div>
-                    <div class="time"><small></small></div>
-                </div>`;
-        return;
-    }
+    // if (cityTimeZone === "") {
+    //     citiesElement.innerHTML = `<div class="city" id="America/Los_Angeles">
+    //                 <div>
+    //                     <h2>Los Angeles</h2>
+    //                     <div class="date"></div>
+    //                 </div>
+    //                 <div class="time"><small></small></div>
+    //             </div>
+    //             <div class="city" id="Europe/Budapest">
+    //                 <div>
+    //                     <h2>Budapest</h2>
+    //                     <div class="date"></div>
+    //                 </div>
+    //                 <div class="time"><small></small></div>
+    //             </div>
+    //             <div class="city" id="Europe/Madrid">
+    //                 <div>
+    //                     <h2>Madrid</h2>
+    //                     <div class="date"></div>
+    //                 </div>
+    //                 <div class="time"><small></small></div>
+    //             </div>`;
+    //     return;
+    // }
     citiesElement.innerHTML = `
                     <div class="city" id='${cityTimeZone}'>
                     <div>
@@ -55,7 +55,7 @@ function updateCity(event) {
                     <div class="time">${cityTime.format(
                         "h:mm:ss"
                     )} <small>${cityTime.format("A")}</small></div>
-                    </div>`;
+                    </div>n a href="index.html>All Cities</a>`;
 }
 
 updateTime();
